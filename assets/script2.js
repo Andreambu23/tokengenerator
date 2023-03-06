@@ -18,7 +18,7 @@ function meuEscopo() {
         const telefone = form.querySelector('.telefone');
         const pedido = form.querySelector('.pedido');
         const token = document.querySelector(".password").textContent;
-
+        let containerPassword = document.querySelector("#container-password");
         console.log(dados)
         
         dados.push({
@@ -28,10 +28,11 @@ function meuEscopo() {
             
         })
 
-        resultado.innerHTML += `<p>Nome: ${nome.value} ///  Telefone: ${telefone.value} /// Token: ${token} </p></br>`
+        resultado.innerHTML += `<p>Nome: ${nome.value} ///  Telefone: ${telefone.value} /// Pedido: ${pedido.value} Token: ${token} </p></br>`
         nome.value='';
         telefone.value='';
         pedido.value='';
+        
     }
     
     form.addEventListener('submit', recebeEventoForm)
